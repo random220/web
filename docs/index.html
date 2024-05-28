@@ -4,39 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Console Interaction</title>
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #2b2b2b;
-            color: #00ff00;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        #console {
-            width: 60%;
-            max-width: 600px;
-            background-color: #1e1e1e;
-            border: 2px solid #00ff00;
-            padding: 20px;
-            box-shadow: 0 0 10px #00ff00;
-        }
-        .line {
-            margin: 10px 0;
-        }
-        .input-line {
-            display: flex;
-            align-items: center;
-        }
-        .input-line span {
-            margin-right: 10px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="console">
@@ -48,16 +16,6 @@
         <div id="response" class="line hidden"></div>
     </div>
 
-    <script>
-        document.getElementById('nameInput').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                const name = event.target.value;
-                const responseDiv = document.getElementById('response');
-                responseDiv.textContent = `Nice to meet you ${name}!`;
-                responseDiv.classList.remove('hidden');
-                event.target.parentElement.classList.add('hidden');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
